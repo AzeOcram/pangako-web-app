@@ -35,7 +35,7 @@ body {
 }
 .hero-firstname {
   position: absolute; top: 16px; left: 16px; z-index: 2;
-  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-size: clamp(2.5rem, 7vw, 5.5rem); left: 50%; transform: translateX(-50%);
   font-weight: 900; color: white; line-height: 1; letter-spacing: 0.02em;
 }
 .hero-photo {
@@ -44,7 +44,7 @@ body {
 }
 .hero-lastname {
   position: absolute; bottom: 12px; left: 16px; z-index: 2;
-  font-size: clamp(3rem, 9vw, 7rem);
+  font-size: clamp(3rem, 9vw, 7rem); left: 50%; transform: translateX(-50%);
   font-weight: 900; color: rgba(255,255,255,0.22);
   line-height: 1; letter-spacing: 0.04em;
 }
@@ -130,12 +130,12 @@ body {
   display: flex; flex-direction: column;border: 1px solid #eee; border-radius: 8px; padding: 14px 16px; position: relative;
 }
 .project-top {
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex; align-items: center;
   margin-bottom: 12px; gap: 12px;
 }
-.project-name { font-size: 1.05rem; font-weight: 600; color: #1a1a2e; }
+.project-name { font-size: 1.05rem; font-weight: 600; color: #1a1a2e; flex: 1; }
 .project-badge {
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: center; white-space: nowrap;
   font-size: 0.7rem; font-weight: 600;
   padding: 3px 10px; border-radius: 999px;
 }
@@ -189,6 +189,7 @@ body {
 .saln-networth { font-weight: 700; color: #3d4f99; }
 
 .reference-btn {
+  margin-left: auto;
   position: relative;
   display: inline-block;
   cursor: pointer;

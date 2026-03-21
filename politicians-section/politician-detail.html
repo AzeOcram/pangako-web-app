@@ -159,19 +159,19 @@
               <span class="project-badge badge--${pr.status === 'Fulfilled' ? 'green' : pr.status === 'In Progress' ? 'blue' : 'red'}">
                 ${pr.status}
               </span>
-              ${pr.reference ? `
-                <span class="reference-btn">View Reference
-                  <span class="tooltip">
-                    <ul>
-                      <li><a href="${pr.reference}" target="_blank">${pr.reference}</a></li>
-                    </ul>
-                    <span class="arrow"></span>
-                  </span>
-                </span>
-              ` : '—'}
             </div>
           </div>
           <p class="project-desc">${pr.description}</p>
+          ${pr.reference ? `
+            <span class="reference-btn">View Reference
+              <span class="tooltip">
+                <ul>
+                  <li><a href="${pr.reference}" target="_blank">${pr.reference}</a></li>
+                </ul>
+                <span class="arrow"></span>
+              </span>
+            </span>
+          ` : '—'}
         </div>
       `).join('');
 
