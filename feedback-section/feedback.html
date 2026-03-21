@@ -85,9 +85,10 @@
 
   </main>
 
-  <script src="../js/feedback-data.js"></script>
   <script>
-    function submitFeedback() {
+    const API = 'http://localhost:3000/api';
+
+    async function submitFeedback() {
       const politician = document.getElementById('feedPolitician').value.trim();
       const type = document.getElementById('feedType').value;
       const description = document.getElementById('feedDescription').value.trim();
@@ -108,43 +109,67 @@
         politician,
         type,
         description,
-        source: document.getElementById('feedSource').value.trim()
+        source,
       };
 
-      feedbackData.save(entry);
+      try {
+        const res = await fetch(`${API}/feedback`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(entry),
+        });
 
-      // Reset form
-      document.getElementById('feedName').value = '';
-      document.getElementById('feedPolitician').value = '';
-      document.getElementById('feedType').value = '';
-      document.getElementById('feedDescription').value = '';
-      document.getElementById('feedSource').value = '';
+        const data = await res.json();
 
-      renderSubmissions();
-      showToast();
+        if (data.success) {
+          // Reset form
+          document.getElementById('feedName').value = '';
+          document.getElementById('feedPolitician').value = '';
+          document.getElementById('feedType').value = '';
+          document.getElementById('feedDescription').value = '';
+          document.getElementById('feedSource').value = '';
+
+          renderSubmissions();
+          showToast();
+        } else {
+          errorEl.textContent = data.message || 'Failed to submit. Try again.';
+          errorEl.style.display = 'block';
+        }
+      } catch (err) {
+        errorEl.textContent = 'Server error. Is the server running?';
+        errorEl.style.display = 'block';
+      }
     }
 
-    function renderSubmissions() {
+    async function renderSubmissions() {
       const list = document.getElementById('submissionsList');
-      const all = feedbackData.getAll();
 
-      if (all.length === 0) {
-        list.innerHTML = '<p class="no-submissions">No submissions yet. Be the first to report!</p>';
-        return;
-      }
+      try {
+        const res = await fetch(`${API}/feedback`);
+        const data = await res.json();
+        const all = data.data || [];
 
-      list.innerHTML = all.map(entry => `
-        <div class="submission-card">
-          <div class="submission-top">
-            <span class="submission-type ${entry.type.replace(' ', '-')}">${entry.type}</span>
-            <span class="submission-date">${entry.date}</span>
+        if (all.length === 0) {
+          list.innerHTML = '<p class="no-submissions">No submissions yet. Be the first to report!</p>';
+          return;
+        }
+
+        list.innerHTML = all.map(entry => `
+          <div class="submission-card">
+            <div class="submission-top">
+              <span class="submission-type ${entry.type.replace(' ', '-')}">${entry.type}</span>
+              <span class="submission-date">${entry.date}</span>
+            </div>
+            <div class="submission-politician">${entry.politician}</div>
+            <div class="submission-description">${entry.description}</div>
+            ${entry.source ? `<a href="${entry.source}" class="submission-source" target="_blank">View Source →</a>` : ''}
+            <div class="submission-author">— ${entry.name}</div>
           </div>
-          <div class="submission-politician">${entry.politician}</div>
-          <div class="submission-description">${entry.description}</div>
-          ${entry.source ? `<a href="${entry.source}" class="submission-source" target="_blank">View Source →</a>` : ''}
-          <div class="submission-author">— ${entry.name}</div>
-        </div>
-      `).join('');
+        `).join('');
+
+      } catch (err) {
+        list.innerHTML = '<p class="no-submissions">Could not load submissions.</p>';
+      }
     }
 
     function showToast() {

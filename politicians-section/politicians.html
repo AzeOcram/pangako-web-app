@@ -36,254 +36,63 @@
       <div class="search-suggestions" id="searchSuggestions"></div>
     </div>
 
+    <!-- Grid rendered dynamically from API -->
     <div class="pol-grid" id="polGrid">
-
-      <!-- Cards 1-2: pulled from politiciansData -->
-      <div class="pol-card" id="card-1">
-        <div class="pol-inner">
-          <img class="pol-photo" id="photo-1" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name" id="name-1">Loading...</h3>
-          <p class="pol-detail" id="position-1"></p>
-          <p class="pol-detail" id="party-1"></p>
-          <p class="pol-detail" id="rate-1"></p>
-          <a href="politician-detail.html?id=1" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card" id="card-2">
-        <div class="pol-inner">
-          <img class="pol-photo" id="photo-2" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name" id="name-2">Loading...</h3>
-          <p class="pol-detail" id="position-2"></p>
-          <p class="pol-detail" id="party-2"></p>
-          <p class="pol-detail" id="rate-2"></p>
-          <a href="politician-detail.html?id=2" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <!-- Cards 3-8: placeholders -->
-      <div class="pol-card">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=3" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=4" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=5" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=6" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=7" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=8" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <!-- Hidden cards 9–20: placeholders -->
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=9" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=10" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=11" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=12" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=13" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=14" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=15" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=16" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=17" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=18" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=19" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
-      <div class="pol-card pol-card--hidden">
-        <div class="pol-inner">
-          <img class="pol-photo" src="https://placehold.co/240x200/cccccc/555555?text=Photo" alt="Politician" />
-          <h3 class="pol-name">Politician Name</h3>
-          <p class="pol-detail">Position</p>
-          <p class="pol-detail">Party</p>
-          <p class="pol-detail">Success Rate</p>
-          <a href="politician-detail.html?id=20" class="pol-btn">View Politician</a>
-        </div>
-      </div>
-
+      <div class="pol-loading">Loading politicians...</div>
     </div>
 
     <div class="pol-expand">
-      <button class="pol-expand-btn" id="expandBtn" onclick="togglePoliticians()">Show More</button>
+      <button class="pol-expand-btn" id="expandBtn" onclick="togglePoliticians()" style="display:none;">Show More</button>
     </div>
   </main>
 
-  <script src="../js/politicians-data.js"></script>
   <script>
-    // Fill in real data for cards that exist in politiciansData
-    politiciansData.forEach(function(p) {
-      var photo = document.getElementById('photo-' + p.id);
-      var name = document.getElementById('name-' + p.id);
-      var position = document.getElementById('position-' + p.id);
-      var party = document.getElementById('party-' + p.id);
-      var rate = document.getElementById('rate-' + p.id);
+    const API = 'http://localhost:3000/api';
+    const VISIBLE_COUNT = 8;
+    let allPoliticians = [];
 
-      if (photo) photo.src = p.photo;
-      if (name) name.textContent = p.firstname + ' ' + p.lastname;
-      if (position) position.textContent = p.position;
-      if (party) party.textContent = p.party;
-      if (rate) rate.textContent = 'Success Rate: ' + p.successRate;
-    });
+    // Fetch all politicians from API
+    async function loadPoliticians() {
+      try {
+        const res = await fetch(`${API}/politicians`);
+        const data = await res.json();
+        allPoliticians = data.data || [];
+        renderGrid(allPoliticians);
+        setupSearch();
+      } catch (err) {
+        document.getElementById('polGrid').innerHTML = '<div class="pol-loading">Failed to load politicians. Is the server running?</div>';
+      }
+    }
+
+    // Render politician cards dynamically
+    function renderGrid(politicians) {
+      const grid = document.getElementById('polGrid');
+      const btn = document.getElementById('expandBtn');
+
+      if (politicians.length === 0) {
+        grid.innerHTML = '<div class="pol-loading">No politicians found.</div>';
+        btn.style.display = 'none';
+        return;
+      }
+
+      grid.innerHTML = politicians.map(function(p, index) {
+        const isHidden = index >= VISIBLE_COUNT;
+        return `
+          <div class="pol-card${isHidden ? ' pol-card--hidden' : ''}">
+            <div class="pol-inner">
+              <img class="pol-photo" src="${p.photo}" alt="${p.firstname} ${p.lastname}" />
+              <h3 class="pol-name">${p.firstname} ${p.lastname}</h3>
+              <p class="pol-detail">${p.position}</p>
+              <p class="pol-detail">${p.party}</p>
+              <p class="pol-detail">Success Rate: ${p.successRate}</p>
+              <a href="politician-detail.html?id=${p._id}" class="pol-btn">View Politician</a>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      btn.style.display = politicians.length > VISIBLE_COUNT ? 'inline-block' : 'none';
+    }
 
     function togglePoliticians() {
       const hidden = document.querySelectorAll('.pol-card--hidden');
@@ -294,49 +103,55 @@
     }
 
     // Search with suggestions
-    const searchInput = document.getElementById('searchInput');
-    const suggestions = document.getElementById('searchSuggestions');
+    function setupSearch() {
+      const searchInput = document.getElementById('searchInput');
+      const suggestions = document.getElementById('searchSuggestions');
 
-    searchInput.addEventListener('input', function() {
-      const query = this.value.trim().toLowerCase();
+      searchInput.addEventListener('input', function() {
+        const query = this.value.trim().toLowerCase();
 
-      if (query.length === 0) {
-        suggestions.classList.remove('open');
-        suggestions.innerHTML = '';
-        return;
-      }
+        if (query.length === 0) {
+          suggestions.classList.remove('open');
+          suggestions.innerHTML = '';
+          renderGrid(allPoliticians);
+          return;
+        }
 
-      const matches = politiciansData.filter(function(p) {
-        const fullname = (p.firstname + ' ' + p.lastname).toLowerCase();
-        const fullnameDetailed = p.fullname.toLowerCase();
-        return fullname.includes(query) || fullnameDetailed.includes(query);
+        const matches = allPoliticians.filter(function(p) {
+          const fullname = (p.firstname + ' ' + p.lastname).toLowerCase();
+          const fullnameDetailed = p.fullname.toLowerCase();
+          return fullname.includes(query) || fullnameDetailed.includes(query);
+        });
+
+        if (matches.length === 0) {
+          suggestions.innerHTML = '<div class="suggestion-empty">No politicians found</div>';
+        } else {
+          suggestions.innerHTML = matches.map(function(p) {
+            return `
+              <a href="politician-detail.html?id=${p._id}" class="suggestion-item">
+                <img class="suggestion-photo" src="${p.photo}" alt="${p.firstname} ${p.lastname}" />
+                <div class="suggestion-info">
+                  <span class="suggestion-name">${p.firstname} ${p.lastname}</span>
+                  <span class="suggestion-position">${p.position}</span>
+                </div>
+              </a>
+            `;
+          }).join('');
+        }
+
+        suggestions.classList.add('open');
       });
 
-      if (matches.length === 0) {
-        suggestions.innerHTML = '<div class="suggestion-empty">No politicians found</div>';
-      } else {
-        suggestions.innerHTML = matches.map(function(p) {
-          return `
-            <a href="politician-detail.html?id=${p.id}" class="suggestion-item">
-              <img class="suggestion-photo" src="${p.photo}" alt="${p.firstname} ${p.lastname}" />
-              <div class="suggestion-info">
-                <span class="suggestion-name">${p.firstname} ${p.lastname}</span>
-                <span class="suggestion-position">${p.position}</span>
-              </div>
-            </a>
-          `;
-        }).join('');
-      }
+      // Close suggestions when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
+          suggestions.classList.remove('open');
+        }
+      });
+    }
 
-      suggestions.classList.add('open');
-    });
-
-    // Close suggestions when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
-        suggestions.classList.remove('open');
-      }
-    });
+    // Init
+    loadPoliticians();
   </script>
 
 </body>

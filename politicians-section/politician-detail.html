@@ -117,92 +117,79 @@
 
   </div>
 
-  <script src="../js/politicians-data.js"></script>
   <script>
+    const API = 'http://localhost:3000/api';
     const params = new URLSearchParams(window.location.search);
-    const id = parseInt(params.get('id'));
-    const p = politiciansData.find(p => p.id === id);
+    const id = params.get('id');
 
-    if (p) {
-      document.title = p.firstname + ' ' + p.lastname + ' — Pangako';
+    async function loadPolitician() {
+      try {
+        const res = await fetch(`${API}/politicians/${id}`);
+        const data = await res.json();
 
-      // Hero
-      document.getElementById('detailFirstname').textContent = p.firstname;
-      document.getElementById('detailLastname').textContent = p.lastname;
-      document.getElementById('detailPhoto').src = p.photo;
+        if (!data.success) {
+          document.getElementById('detailFirstname').textContent = 'Not found';
+          return;
+        }
 
-      // Basic info
-      document.getElementById('infoFullname').textContent = p.fullname;
-      document.getElementById('infoPosition').textContent = p.position;
-      document.getElementById('infoParty').textContent = p.party;
-      document.getElementById('infoTerm').textContent = p.term;
-      document.getElementById('infoRate').textContent = p.successRate;
-      document.getElementById('infoRateBar').style.width = p.successRate;
+        const p = data.data;
 
-      // Projects summary
-      const fulfilled  = p.projects.filter(pr => pr.status === 'Fulfilled').length;
-      const inProgress = p.projects.filter(pr => pr.status === 'In Progress').length;
-      const discontinued = p.projects.filter(pr => pr.status === 'Discontinued').length;
+        document.title = p.firstname + ' ' + p.lastname + ' — Pangako';
 
-      document.getElementById('projectsSummary').innerHTML = `
-        <div class="pill pill--green">${fulfilled} Fulfilled</div>
-        <div class="pill pill--blue">${inProgress} In Progress</div>
-        <div class="pill pill--red">${discontinued} Discontinued</div>
-      `;
+        // Hero
+        document.getElementById('detailFirstname').textContent = p.firstname;
+        document.getElementById('detailLastname').textContent = p.lastname;
+        document.getElementById('detailPhoto').src = p.photo;
 
-      // Project list
-      document.getElementById('projectsList').innerHTML = p.projects.map(pr => `
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-name">${pr.name}</span>
-            <div class="project-status">
-              <span class="project-badge badge--${pr.status === 'Fulfilled' ? 'green' : pr.status === 'In Progress' ? 'blue' : 'red'}">
-                ${pr.status}
-              </span>
-              ${pr.reference ? `
-                <span class="reference-btn">View Reference
-                  <span class="tooltip">
-                    <ul>
-                      <li><a href="${pr.reference}" target="_blank">${pr.reference}</a></li>
-                    </ul>
-                    <span class="arrow"></span>
-                  </span>
+        // Basic info
+        document.getElementById('infoFullname').textContent = p.fullname;
+        document.getElementById('infoPosition').textContent = p.position;
+        document.getElementById('infoParty').textContent = p.party;
+        document.getElementById('infoTerm').textContent = p.term;
+        document.getElementById('infoRate').textContent = p.successRate;
+        document.getElementById('infoRateBar').style.width = p.successRate;
+
+        // Projects summary
+        const fulfilled = p.projects.filter(pr => pr.status === 'Fulfilled').length;
+        const inProgress = p.projects.filter(pr => pr.status === 'In Progress').length;
+        const discontinued = p.projects.filter(pr => pr.status === 'Discontinued').length;
+
+        document.getElementById('projectsSummary').innerHTML = `
+          <div class="pill pill--green">${fulfilled} Fulfilled</div>
+          <div class="pill pill--blue">${inProgress} In Progress</div>
+          <div class="pill pill--red">${discontinued} Discontinued</div>
+        `;
+
+        // Project list
+        document.getElementById('projectsList').innerHTML = p.projects.map(pr => `
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-name">${pr.name}</span>
+              <div class="project-status">
+                <span class="project-badge badge--${pr.status === 'Fulfilled' ? 'green' : pr.status === 'In Progress' ? 'blue' : 'red'}">
+                  ${pr.status}
                 </span>
-              ` : '—'}
+                ${pr.reference ? `
+                  <span class="reference-btn">View Reference
+                    <span class="tooltip">
+                      <ul>
+                        <li><a href="${pr.reference}" target="_blank">${pr.reference}</a></li>
+                      </ul>
+                      <span class="arrow"></span>
+                    </span>
+                  </span>
+                ` : '—'}
+              </div>
             </div>
+            <p class="project-desc">${pr.description}</p>
           </div>
-          <p class="project-desc">${pr.description}</p>
-        </div>
-      `).join('');
+        `).join('');
 
-      // Stances
-      document.getElementById('stancesBody').innerHTML = p.stances.map(s => `
-        <tr>
-          <td>${s.issue}</td>
-          <td><span class="stance-badge stance--${s.stance === 'Agree' ? 'agree' : 'disagree'}">${s.stance}</span></td>
-          <td>
-              ${s.reference ? `
-                <span class="reference-btn">View Reference
-                  <span class="tooltip">
-                    <ul>
-                      <li><a href="${s.reference}" target="_blank">${s.reference}</a></li>
-                    </ul>
-                    <span class="arrow"></span>
-                  </span>
-                </span>
-              ` : '—'}
-            </td>
-        </tr>
-      `).join('');
-
-      // SALN
-      document.getElementById('salnBody').innerHTML = p.saln.map(s => {
-        return `
+        // Stances
+        document.getElementById('stancesBody').innerHTML = p.stances.map(s => `
           <tr>
-            <td>${s.year}</td>
-            <td>${s.assets}</td>
-            <td>${s.liabilities}</td>
-            <td class="saln-networth">${s.networth} </td>
+            <td>${s.issue}</td>
+            <td><span class="stance-badge stance--${s.stance === 'Agree' ? 'agree' : 'disagree'}">${s.stance}</span></td>
             <td>
               ${s.reference ? `
                 <span class="reference-btn">View Reference
@@ -216,9 +203,36 @@
               ` : '—'}
             </td>
           </tr>
-        `;
-      }).join('');
+        `).join('');
+
+        // SALN
+        document.getElementById('salnBody').innerHTML = p.saln.map(s => `
+          <tr>
+            <td>${s.year}</td>
+            <td>${s.assets}</td>
+            <td>${s.liabilities}</td>
+            <td class="saln-networth">${s.networth}</td>
+            <td>
+              ${s.reference ? `
+                <span class="reference-btn">View Reference
+                  <span class="tooltip">
+                    <ul>
+                      <li><a href="${s.reference}" target="_blank">${s.reference}</a></li>
+                    </ul>
+                    <span class="arrow"></span>
+                  </span>
+                </span>
+              ` : '—'}
+            </td>
+          </tr>
+        `).join('');
+
+      } catch (err) {
+        document.getElementById('detailFirstname').textContent = 'Error loading data.';
+      }
     }
+
+    loadPolitician();
   </script>
 
 </body>
