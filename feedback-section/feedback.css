@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── Navbar (same as other pages) ── */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: linear-gradient(to right, #3d4f99, #c45070);
+}
+
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+}
+
+.nav-links-wrapper {
+  border-radius: 999px;
+  padding: 2px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.nav-link {
+  display: block;
+  padding: 9px 32px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.nav-links li:not(:last-child) .nav-link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: 700;
+}
+
+/* ── Hero ── */
+.feedback-hero {
+  text-align: center;
+  padding: 48px 40px 32px;
+}
+
+.feedback-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.feedback-sub {
+  font-size: 0.95rem;
+  color: #555;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Layout ── */
+.feedback-main {
+  padding-bottom: 60px;
+}
+
+.feedback-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  padding: 0 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Form Card ── */
+.feedback-form-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card {
+  background: linear-gradient(135deg, #3d4f99, #c45070);
+  border-radius: 14px;
+  padding: 3px;
+}
+
+.form-card > * {
+  background: white;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* trick: wrap inner content */
+.form-card {
+  background: linear-gradient(135deg, #3d4f99, #c45070);
+  border-radius: 14px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-inner {
+  background: white;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.required {
+  color: #c45070;
+}
+
+.optional {
+  color: #aaa;
+  font-weight: 400;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #3d4f99;
+  background: white;
+}
+
+.form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-error {
+  display: none;
+  color: #c45070;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: rgba(196, 80, 112, 0.08);
+  border-radius: 6px;
+  border: 1px solid rgba(196, 80, 112, 0.25);
+}
+
+.submit-btn {
+  padding: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3d4f99, #c45070);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+  margin-top: 4px;
+}
+
+.submit-btn:hover {
+  opacity: 0.85;
+}
+
+/* ── Submissions ── */
+.submissions-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.submissions-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.no-submissions {
+  color: #aaa;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* Submission card - same gradient border trick */
+.submission-card {
+  background: linear-gradient(135deg, #3d4f99, #c45070);
+  border-radius: 14px;
+  padding: 3px;
+}
+
+.submission-card > * {
+  background: white;
+  border-radius: 12px;
+}
+
+/* override - render as block inside */
+.submission-card {
+  background: linear-gradient(135deg, #3d4f99, #c45070);
+  border-radius: 14px;
+  padding: 3px;
+  display: flex;
+}
+
+/* inner white box via JS innerHTML - we apply a wrapper class */
+#submissionsList .submission-card {
+  margin-bottom: 0;
+}
+
+/* since JS renders inner divs, style them directly */
+.submission-card .submission-top,
+.submission-card .submission-politician,
+.submission-card .submission-description,
+.submission-card .submission-source,
+.submission-card .submission-author {
+  background: transparent;
+}
+
+/* actual white inner */
+.submission-card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 2px #c45070, 0 0 0 2px #3d4f99;
+  box-shadow: 2px 2px 0 0 rgba(196,80,112,0.3);
+  border: 1.5px solid #e0d0e8;
+}
+
+.submission-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.submission-type {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.submission-type.New-Evidence {
+  background: rgba(61, 79, 153, 0.12);
+  color: #3d4f99;
+}
+
+.submission-type.New-Promise {
+  background: rgba(100, 160, 80, 0.12);
+  color: #4a8a30;
+}
+
+.submission-type.Correction {
+  background: rgba(196, 80, 112, 0.12);
+  color: #c45070;
+}
+
+.submission-type.General-Feedback {
+  background: rgba(150, 100, 180, 0.12);
+  color: #7b4f8e;
+}
+
+.submission-date {
+  font-size: 0.78rem;
+  color: #aaa;
+}
+
+.submission-politician {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.submission-description {
+  font-size: 0.88rem;
+  color: #444;
+  line-height: 1.55;
+}
+
+.submission-source {
+  font-size: 0.8rem;
+  color: #3d4f99;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.submission-source:hover {
+  text-decoration: underline;
+}
+
+.submission-author {
+  font-size: 0.8rem;
+  color: #aaa;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* ── Toast ── */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: linear-gradient(135deg, #3d4f99, #c45070);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .feedback-layout {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .feedback-hero {
+    padding: 32px 20px 24px;
+  }
+}
