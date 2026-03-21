@@ -308,7 +308,8 @@
 
       const matches = politiciansData.filter(function(p) {
         const fullname = (p.firstname + ' ' + p.lastname).toLowerCase();
-        return fullname.includes(query);
+        const fullnameDetailed = p.fullname.toLowerCase();
+        return fullname.includes(query) || fullnameDetailed.includes(query);
       });
 
       if (matches.length === 0) {
