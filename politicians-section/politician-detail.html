@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politician — Pangako</title>
+  <link rel="stylesheet" href="politician-detail.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="../images/main_logo.png" alt="Pangako" class="nav-logo-img" />
+    </a>
+    <div class="nav-links-wrapper">
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="politicians.html" class="nav-link active">Politicians</a></li>
+        <li><a href="../news-section/news.html" class="nav-link">News</a></li>
+        <li><a href="#" class="nav-link">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-firstname" id="detailFirstname"></div>
+    <img class="hero-photo" id="detailPhoto" src="" alt="" />
+    <div class="hero-lastname" id="detailLastname"></div>
+  </div>
+
+  <div class="details" id="detailsSection">
+    <!-- details coming soon -->
+  </div>
+
+  <script src="../js/politicians-data.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get('id'));
+    const politician = politiciansData.find(p => p.id === id);
+
+    if (politician) {
+      document.title = politician.firstname + ' ' + politician.lastname + ' — Pangako';
+      document.getElementById('detailFirstname').textContent = politician.firstname;
+      document.getElementById('detailLastname').textContent = politician.lastname;
+      document.getElementById('detailPhoto').src = politician.photo;
+      document.getElementById('detailPhoto').alt = politician.firstname + ' ' + politician.lastname;
+    }
+  </script>
+
+</body>
+</html>
