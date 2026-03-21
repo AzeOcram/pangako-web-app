@@ -23,6 +23,19 @@
   </nav>
 
   <main class="politicians">
+
+    <!-- Search bar -->
+    <div class="search-wrap">
+      <input
+        type="text"
+        class="search-input"
+        id="searchInput"
+        placeholder="Search politicians..."
+        autocomplete="off"
+      />
+      <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+
     <div class="pol-grid" id="polGrid">
 
       <!-- Cards 1-2: pulled from politiciansData -->
@@ -279,6 +292,50 @@
       hidden.forEach(card => card.style.display = isHidden ? 'flex' : 'none');
       btn.textContent = isHidden ? 'Show Less' : 'Show More';
     }
+
+    // Search with suggestions
+    const searchInput = document.getElementById('searchInput');
+    const suggestions = document.getElementById('searchSuggestions');
+
+    searchInput.addEventListener('input', function() {
+      const query = this.value.trim().toLowerCase();
+
+      if (query.length === 0) {
+        suggestions.classList.remove('open');
+        suggestions.innerHTML = '';
+        return;
+      }
+
+      const matches = politiciansData.filter(function(p) {
+        const fullname = (p.firstname + ' ' + p.lastname).toLowerCase();
+        return fullname.includes(query);
+      });
+
+      if (matches.length === 0) {
+        suggestions.innerHTML = '<div class="suggestion-empty">No politicians found</div>';
+      } else {
+        suggestions.innerHTML = matches.map(function(p) {
+          return `
+            <a href="politician-detail.html?id=${p.id}" class="suggestion-item">
+              <img class="suggestion-photo" src="${p.photo}" alt="${p.firstname} ${p.lastname}" />
+              <div class="suggestion-info">
+                <span class="suggestion-name">${p.firstname} ${p.lastname}</span>
+                <span class="suggestion-position">${p.position}</span>
+              </div>
+            </a>
+          `;
+        }).join('');
+      }
+
+      suggestions.classList.add('open');
+    });
+
+    // Close suggestions when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
+        suggestions.classList.remove('open');
+      }
+    });
   </script>
 
 </body>

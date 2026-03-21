@@ -163,3 +163,91 @@ body {
 .pol-expand-btn:hover {
   opacity: 0.85;
 }
+
+/* ── Search ── */
+.search-wrap {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto 28px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background: white;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #3d4f99;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  overflow: hidden;
+  z-index: 100;
+  display: none;
+}
+
+.search-suggestions.open {
+  display: block;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+
+.suggestion-item:hover {
+  background: #f5f5f5;
+}
+
+.suggestion-photo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+}
+
+.suggestion-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.suggestion-position {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+.suggestion-empty {
+  padding: 14px 16px;
+  font-size: 0.88rem;
+  color: #aaa;
+  text-align: center;
+}
