@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News — Pangako</title>
+  <link rel="stylesheet" href="news-detail.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="../images/main_logo.png" alt="Pangako" class="nav-logo-img" />
+    </a>
+    <div class="nav-links-wrapper">
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../politicians-section/politicians.html" class="nav-link">Politicians</a></li>
+        <li><a href="news.html" class="nav-link active">News</a></li>
+        <li><a href="#" class="nav-link">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero-banner">
+    <img class="hero-img" id="detailImg" src="" alt="" />
+    <div class="hero-overlay">
+      <h1 class="hero-title" id="detailTitle"></h1>
+      <p class="hero-date" id="detailDate"></p>
+    </div>
+  </div>
+
+  <div class="article">
+    <div id="detailBody"></div>
+  </div>
+
+  <script src="../js/news-data.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get('id'));
+    const article = newsData.find(n => n.id === id);
+
+    if (article) {
+      document.title = article.title + ' — Pangako';
+      document.getElementById('detailImg').src = article.image;
+      document.getElementById('detailImg').alt = article.title;
+      document.getElementById('detailTitle').textContent = article.title;
+      document.getElementById('detailDate').textContent = article.date;
+      document.getElementById('detailBody').innerHTML = article.body
+        .map(p => `<p>${p}</p>`)
+        .join('');
+    } else {
+      document.getElementById('detailTitle').textContent = 'Article not found.';
+    }
+  </script>
+
+</body>
+</html>

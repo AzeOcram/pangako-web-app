@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: white;
+}
+
+/* ── Navbar ── */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: linear-gradient(to right, #3d4f99, #c45070);
+}
+
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+}
+
+.nav-links-wrapper {
+  border-radius: 999px;
+  padding: 2px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.nav-link {
+  display: block;
+  padding: 9px 32px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.nav-links li:not(:last-child) .nav-link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:hover { background: rgba(255, 255, 255, 0.15); }
+.nav-link.active { background: rgba(255, 255, 255, 0.25); font-weight: 700; }
+
+/* ── Hero banner ── */
+.hero-banner {
+  position: relative;
+  height: 420px;
+  background: linear-gradient(to right, #3d4f99, #c45070);
+}
+
+.hero-img {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  color: white;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-date {
+  font-size: 1rem;
+  margin-top: 6px;
+  opacity: 0.85;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+/* ── Article body ── */
+.article {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+.article p {
+  font-size: 0.97rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
