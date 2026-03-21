@@ -127,21 +127,22 @@ body {
 
 }
 .project-card {
-  border: 1px solid #eee; border-radius: 0; padding: 14px 16px;
+  display: flex; flex-direction: column;border: 1px solid #eee; border-radius: 8px; padding: 14px 16px; position: relative;
 }
 .project-top {
   display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 6px;
+  margin-bottom: 12px; gap: 12px;
 }
 .project-name { font-size: 1.05rem; font-weight: 600; color: #1a1a2e; }
 .project-badge {
+  display: flex; align-items: center; justify-content: center;
   font-size: 0.7rem; font-weight: 600;
   padding: 3px 10px; border-radius: 999px;
 }
 .badge--green { background: rgba(34,197,94,0.12); color: #16a34a; }
 .badge--blue  { background: rgba(61,79,153,0.12); color: #3d4f99; }
 .badge--red   { background: rgba(196,80,112,0.12); color: #c45070; }
-.project-desc { font-size: 0.95rem; color: #666; line-height: 1.55; }
+.project-desc { font-size: 0.95rem; color: #666; line-height: 1.55; padding-right: 140px; }
 
 /* ── Stances Table ── */
 .stances-table {
@@ -179,9 +180,58 @@ body {
   border-bottom: 1px solid #eee;
 }
 .saln-table td {
+  position: relative;
   padding: 14px 24px;
   font-size: 1rem; color: #333;
   border-bottom: 1px solid #f0f0f0;
 }
 .saln-table tr:last-child td { border-bottom: none; }
 .saln-networth { font-weight: 700; color: #3d4f99; }
+
+.reference-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.tooltip {
+  visibility: hidden;
+  list-style: none;
+  opacity: 0;
+  min-width: 220px;
+  max-width: 400px;
+  white-space: normal;
+  word-break: break-word;
+  width: 220px;
+  background-color: #fff;
+  color: #333;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.3s;
+}
+
+.tooltip .arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  width: 0; height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #fff;
+}
+
+.reference-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}

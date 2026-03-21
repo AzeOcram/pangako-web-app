@@ -86,6 +86,7 @@
           <tr>
             <th>Issue</th>
             <th>Stance</th>
+            <th>Reference</th>
           </tr>
         </thead>
         <tbody id="stancesBody"></tbody>
@@ -104,6 +105,7 @@
             <th>Assets</th>
             <th>Liabilities</th>
             <th>Net Worth</th>
+            <th>Reference</th>
           </tr>
         </thead>
         <tbody id="salnBody"></tbody>
@@ -151,7 +153,21 @@
         <div class="project-card">
           <div class="project-top">
             <span class="project-name">${pr.name}</span>
-            <span class="project-badge badge--${pr.status === 'Fulfilled' ? 'green' : pr.status === 'In Progress' ? 'blue' : 'red'}">${pr.status}</span>
+            <div class="project-status">
+              <span class="project-badge badge--${pr.status === 'Fulfilled' ? 'green' : pr.status === 'In Progress' ? 'blue' : 'red'}">
+                ${pr.status}
+              </span>
+              ${pr.reference ? `
+                <span class="reference-btn">View Reference
+                  <span class="tooltip">
+                    <ul>
+                      <li><a href="${pr.reference}" target="_blank">${pr.reference}</a></li>
+                    </ul>
+                    <span class="arrow"></span>
+                  </span>
+                </span>
+              ` : '—'}
+            </div>
           </div>
           <p class="project-desc">${pr.description}</p>
         </div>
@@ -162,18 +178,44 @@
         <tr>
           <td>${s.issue}</td>
           <td><span class="stance-badge stance--${s.stance === 'Agree' ? 'agree' : 'disagree'}">${s.stance}</span></td>
+          <td>
+              ${s.reference ? `
+                <span class="reference-btn">View Reference
+                  <span class="tooltip">
+                    <ul>
+                      <li><a href="${s.reference}" target="_blank">${s.reference}</a></li>
+                    </ul>
+                    <span class="arrow"></span>
+                  </span>
+                </span>
+              ` : '—'}
+            </td>
         </tr>
       `).join('');
 
       // SALN
-      document.getElementById('salnBody').innerHTML = p.saln.map(s => `
-        <tr>
-          <td>${s.year}</td>
-          <td>${s.assets}</td>
-          <td>${s.liabilities}</td>
-          <td class="saln-networth">${s.networth}</td>
-        </tr>
-      `).join('');
+      document.getElementById('salnBody').innerHTML = p.saln.map(s => {
+        return `
+          <tr>
+            <td>${s.year}</td>
+            <td>${s.assets}</td>
+            <td>${s.liabilities}</td>
+            <td class="saln-networth">${s.networth} </td>
+            <td>
+              ${s.reference ? `
+                <span class="reference-btn">View Reference
+                  <span class="tooltip">
+                    <ul>
+                      <li><a href="${s.reference}" target="_blank">${s.reference}</a></li>
+                    </ul>
+                    <span class="arrow"></span>
+                  </span>
+                </span>
+              ` : '—'}
+            </td>
+          </tr>
+        `;
+      }).join('');
     }
   </script>
 
