@@ -6,7 +6,7 @@
 
 body {
   min-height: 100vh;
-  background: #ffffff;
+  background: #f0f0f0;
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -16,8 +16,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 16px 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  background: white;
+  background: linear-gradient(to right, #3d4f99, #c45070);
 }
 
 .nav-logo-img {
@@ -25,10 +24,15 @@ body {
   width: auto;
 }
 
+.nav-links-wrapper {
+  border-radius: 999px;
+  padding: 2px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
 .nav-links {
   display: flex;
   list-style: none;
-  border: 2px solid #3d4f99;
   border-radius: 999px;
   overflow: hidden;
 }
@@ -36,25 +40,30 @@ body {
 .nav-link {
   display: block;
   padding: 9px 32px;
-  color: #3d4f99;
+  color: white;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
-  border-right: 2px solid #3d4f99;
-  transition: background 0.2s, color 0.2s;
+  position: relative;
+  transition: background 0.2s;
 }
 
-.nav-links li:last-child .nav-link {
-  border-right: none;
+.nav-links li:not(:last-child) .nav-link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .nav-link:hover {
-  background: rgba(61, 79, 153, 0.08);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .nav-link.active {
-  background: linear-gradient(135deg, #3d4f99, #c45070);
-  color: white;
+  background: rgba(255, 255, 255, 0.25);
   font-weight: 700;
 }
 
@@ -69,26 +78,23 @@ body {
   gap: 20px;
 }
 
+/* Outer = gradient background (acts as the border) */
 .pol-card {
+  background: linear-gradient(135deg, #3d4f99, #c45070);
+  border-radius: 14px;
+  padding: 3px;
+  display: flex;
+}
+
+/* Inner = white container sitting on top */
+.pol-inner {
   background: white;
   border-radius: 12px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  position: relative;
-  z-index: 0;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-}
-
-/* Gradient border */
-.pol-card::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #3d4f99, #c45070);
-  z-index: -1;
+  width: 100%;
 }
 
 .pol-photo {
@@ -133,7 +139,7 @@ body {
   display: none;
 }
 
-/* ── Show more button ── */
+/* ── Show more ── */
 .pol-expand {
   display: flex;
   justify-content: center;
