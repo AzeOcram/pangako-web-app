@@ -184,7 +184,8 @@ body {
 
 .pol-btn {
   margin-top: 10px;
-  align-self: flex-start;
+  align-self: center;
+  width: 200px;
   padding: 7px 18px;
   border-radius: 999px;
   background: linear-gradient(135deg, #3d4f99, #c45070);
@@ -193,6 +194,11 @@ body {
   font-weight: 600;
   text-decoration: none;
   transition: opacity 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .pol-btn:hover {
