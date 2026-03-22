@@ -40,6 +40,7 @@
 
   <div class="article">
     <div id="detailBody"></div>
+    <div id="detailReference"></div>
   </div>
 
   <script>
@@ -67,6 +68,9 @@
         document.getElementById('detailBody').innerHTML = article.body
           .map(p => `<p>${p}</p>`)
           .join('');
+        document.getElementById('detailReference').innerHTML = article.reference
+        ? `<p class="article-reference">Source: <a href="${article.reference}" target="_blank">${article.reference}</a></p>`
+        : '';
 
       } catch (err) {
         document.getElementById('detailTitle').textContent = 'Error loading article.';

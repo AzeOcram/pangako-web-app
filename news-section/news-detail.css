@@ -164,3 +164,20 @@ body {
   line-height: 1.8;
   margin-bottom: 24px;
 }
+
+.article-reference {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.article-reference a {
+  color: #3d4f99;
+  text-decoration: none;
+}
+
+.article-reference a:hover {
+  text-decoration: underline;
+}

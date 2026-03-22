@@ -229,14 +229,15 @@ const politicians = [
 const news = [
   {
     title: 'Marcos signs EO to lower rice prices amid public outcry',
-    date: 'March 2026',
+    date: 'September 2023',
     image: '/images/marcosEO.png',
-    summary: 'President Marcos signed an executive order imposing a price cap on rice sold in public markets nationwide.',
+    summary: 'President Marcos signed Executive Order No. 39, imposing a price cap on rice sold in public markets nationwide.',
     body: [
-      'President Ferdinand Marcos Jr. signed Executive Order No. 23, placing a price ceiling on regular milled rice and well-milled rice sold in public markets and supermarkets across the country.',
-      'The order comes amid rising prices of the staple grain, which has remained above P50 per kilogram despite government efforts to stabilize the market.',
-      'Agriculture Secretary Francisco Tiu Laurel Jr. said the government would work with private traders and importers to ensure adequate supply to sustain the price cap.',
+      'President Ferdinand Marcos Jr. signed Executive Order No. 39 on August 31, 2023, placing a price ceiling of ₱41 per kilogram on regular milled rice and ₱45 per kilogram on well-milled rice sold in public markets and supermarkets across the country.',
+      'The order came amid rising prices of the staple grain, which had breached ₱60 per kilogram in some markets despite government efforts to stabilize supply. The National Economic and Development Authority reported rice inflation rose from 1% in January 2022 to 4.2% in July 2023.',
+      'Agriculture Secretary Francisco Tiu Laurel Jr. said the government would work with private traders and importers to ensure adequate supply to sustain the price cap. The EO took effect on September 5, 2023 and was later lifted on October 4, 2023 after rice prices began declining.',
     ],
+    reference: 'https://pco.gov.ph/news_releases/pbbm-sets-price-ceilings-on-rice-nationwide/',
   },
   {
     title: 'Senate approves bill expanding Universal Health Care coverage',
@@ -248,17 +249,19 @@ const news = [
       'Senate President Francis Escudero, who co-authored the measure, said the amendment addresses a critical gap in healthcare access for millions of Filipinos.',
       'The bill now heads to the House of Representatives for concurrence before it is transmitted to Malacañang for signing.',
     ],
+    reference: 'https://www.senate.gov.ph/',
   },
   {
     title: 'DepEd rolls out MATATAG curriculum to all public schools',
-    date: 'January 2026',
+    date: 'August 2023',
     image: '/images/matatag.png',
-    summary: 'The Department of Education begins full implementation of the MATATAG curriculum across all public schools.',
+    summary: 'The Department of Education launched the MATATAG Curriculum on August 10, 2023, with phased implementation starting School Year 2024-2025.',
     body: [
-      'The Department of Education officially launched the full rollout of the MATATAG curriculum to all public elementary and junior high schools nationwide.',
-      'The revised curriculum, which focuses on foundational literacy and numeracy, was piloted in select schools in 2024 before the nationwide expansion.',
-      'Education officials said the curriculum is designed to address the significant learning losses experienced by students during the COVID-19 pandemic.',
+      'The Department of Education officially launched the MATATAG Curriculum on August 10, 2023, led by Vice President and Education Secretary Sara Duterte at Sofitel Hotel in Pasay City.',
+      'The revised K to 10 curriculum decongests the old K-12 curriculum from more than 11,000 competencies to 3,600, focusing on foundational skills such as literacy, numeracy, and socio-emotional development for Kindergarten to Grade 3 learners.',
+      'Phased implementation began in School Year 2024-2025 for Kindergarten, Grades 1, 4, and 7. Grades 2, 5, and 8 follow in SY 2025-2026, with full rollout to Grade 10 by SY 2027-2028.',
     ],
+    reference: 'https://www.pna.gov.ph/articles/1207588',
   },
 ];
 
