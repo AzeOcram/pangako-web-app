@@ -43,7 +43,7 @@ const politicians = [
     lastname: 'DUTERTE',
     order: 2,
     fullname: 'Sara Zimmerman Duterte-Carpio',
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sara_Duterte_2022.jpg/440px-Sara_Duterte_2022.jpg',
+    photo: '/images/duterte.png',
     position: 'Vice President',
     party: 'Hugpong ng Pagbabago',
     term: '2022 – 2028',
@@ -69,7 +69,7 @@ const politicians = [
     lastname: 'ESCUDERO',
     order: 3,
     fullname: 'Francis Joseph G. Escudero',
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Francis_Escudero_official_photo.jpg/440px-Francis_Escudero_official_photo.jpg',
+    photo: '/images/escudero.png',
     position: 'Senate President',
     party: 'NPC',
     term: '2022 – 2028',
@@ -94,7 +94,7 @@ const politicians = [
     lastname: 'ROMUALDEZ',
     order: 4,
     fullname: 'Ferdinand Martin Gerardo Romualdez',
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Martin_Romualdez_official_photo.jpg/440px-Martin_Romualdez_official_photo.jpg',
+    photo: '/images/romualdez.png',
     position: 'House Speaker',
     party: 'Lakas-CMD',
     term: '2022 – 2025',
@@ -120,7 +120,7 @@ const news = [
   {
     title: 'Marcos signs EO to lower rice prices amid public outcry',
     date: 'March 2026',
-    image: 'https://placehold.co/1200x500/cccccc/555555?text=News+Photo',
+    image: '/images/marcosEO.png',
     summary: 'President Marcos signed an executive order imposing a price cap on rice sold in public markets nationwide.',
     body: [
       'President Ferdinand Marcos Jr. signed Executive Order No. 23, placing a price ceiling on regular milled rice and well-milled rice sold in public markets and supermarkets across the country.',
@@ -131,7 +131,7 @@ const news = [
   {
     title: 'Senate approves bill expanding Universal Health Care coverage',
     date: 'February 2026',
-    image: 'https://placehold.co/1200x500/cccccc/555555?text=News+Photo',
+    image: '/images/senate.png',
     summary: 'The Senate passed amendments to the Universal Health Care Act expanding coverage to include mental health services.',
     body: [
       'The Philippine Senate unanimously approved a bill amending the Universal Health Care Act to include comprehensive mental health services under PhilHealth coverage.',
@@ -142,7 +142,7 @@ const news = [
   {
     title: 'DepEd rolls out MATATAG curriculum to all public schools',
     date: 'January 2026',
-    image: 'https://placehold.co/1200x500/cccccc/555555?text=News+Photo',
+    image: '/images/matatag.png',
     summary: 'The Department of Education begins full implementation of the MATATAG curriculum across all public schools.',
     body: [
       'The Department of Education officially launched the full rollout of the MATATAG curriculum to all public elementary and junior high schools nationwide.',
