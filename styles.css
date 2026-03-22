@@ -6,23 +6,62 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #3d4f99 0%, #7b4f8e 50%, #c45070 100%);
   font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* the starting full-screen home gradient */
+.home-gradient-layer {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to bottom, #3d4f99 0%, #7b4f8e 50%, #c45070 100%);
+  z-index: 0;
+}
+
+/* white inner-page background underneath */
+.home-white-underlay {
+  position: fixed;
+  inset: 0;
+  background: #f0f0f0;
+  z-index: -1;
 }
 
 /* ── Navbar ── */
 .navbar {
   display: flex;
   justify-content: center;
-  padding: 24px 0;
+  padding: 24px 0 0;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.navbar-home {
+  justify-content: center;
+}
+
+.nav-links-wrapper {
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.nav-links-wrapper-home {
+  display: inline-block;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 999px;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
@@ -51,17 +90,22 @@ body {
 
 /* ── Hero ── */
 .hero {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 80px);
-  padding: 20px 60px;
+  min-height: 0;
+  padding: 20px 60px 40px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
 .hero-logo {
   max-width: 900px;
   width: 80%;
+  display: block;
 }
 
 .hero-sub {

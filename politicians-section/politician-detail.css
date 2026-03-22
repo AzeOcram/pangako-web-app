@@ -6,25 +6,108 @@ body {
 }
 
 /* ── Navbar ── */
+.page-logo {
+  position: absolute;
+  top: 16px;
+  left: 40px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.from-home-transition .page-logo-img {
+  opacity: 0 !important;
+}
+
+.from-home-transition .nav-links-wrapper {
+  opacity: 0 !important;
+}
+
+.from-home-transition .navbar {
+  background: transparent !important;
+}
+
+.transition-clone--nav {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.35);
+  z-index: 99999;
+}
+
+.transition-clone--nav .nav-links {
+  margin: 0;
+  padding: 0;
+}
+
+.transition-clone--nav .nav-link {
+  white-space: nowrap;
+}
+
+.transition-clone {
+  z-index: 99999;
+}
+
+.page-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  opacity: 1;
+  transition: opacity 180ms ease;
+}
+
 .navbar {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   padding: 16px 40px;
+  position: relative;
   background: linear-gradient(to right, #3d4f99, #c45070);
 }
-.nav-logo-img { height: 36px; width: auto; }
-.nav-links-wrapper { border-radius: 999px; padding: 2px; background: rgba(255,255,255,0.35); }
-.nav-links { display: flex; list-style: none; border-radius: 999px; overflow: hidden; }
+
+.nav-links-wrapper {
+  border-radius: 999px;
+  padding: 2px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .nav-link {
-  display: block; padding: 9px 32px; color: white;
-  text-decoration: none; font-size: 0.9rem; font-weight: 500;
-  position: relative; transition: background 0.2s;
+  display: block;
+  padding: 9px 32px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  transition: background 0.2s;
 }
+
 .nav-links li:not(:last-child) .nav-link::after {
-  content: ''; position: absolute; right: 0; top: 15%;
-  height: 70%; width: 1px; background: rgba(255,255,255,0.5);
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.5);
 }
-.nav-link:hover { background: rgba(255,255,255,0.15); }
-.nav-link.active { background: rgba(255,255,255,0.25); font-weight: 700; }
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: 700;
+}
 
 /* ── Hero ── */
 .hero {
