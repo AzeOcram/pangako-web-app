@@ -47,7 +47,7 @@ const politicians = [
     position: 'Vice President',
     party: 'Hugpong ng Pagbabago',
     term: '2022 – 2028',
-    successRate: '50%',
+    successRate: '40%',
     projects: [
       { name: 'MATATAG Curriculum', status: 'In Progress', description: 'Launched a revised K-12 curriculum to address learning losses from the pandemic.', reference: 'https://www.deped.gov.ph/matatag-curriculum/' },
       { name: 'School-Based Feeding Program', status: 'In Progress', description: 'Expanded feeding programs in all public elementary schools nationwide.', reference: 'https://www.deped.gov.ph/' },
@@ -74,7 +74,7 @@ const politicians = [
     position: 'Senate President',
     party: 'NPC',
     term: '2022 – 2028',
-    successRate: '55%',
+    successRate: '50%',
     projects: [
       { name: 'Magna Carta for Filipino Seafarers', status: 'Fulfilled', description: 'Passed legislation to strengthen protections and benefits for Filipino seafarers.', reference: 'https://www.senate.gov.ph/' },
       { name: 'Anti-Agricultural Smuggling Act', status: 'Fulfilled', description: 'Authored law imposing heavier penalties on agricultural smugglers.', reference: 'https://www.senate.gov.ph/' },
