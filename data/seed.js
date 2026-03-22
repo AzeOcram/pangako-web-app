@@ -17,10 +17,10 @@ const politicians = [
     term: '2022 – 2028',
     successRate: '45%',
     projects: [
-      { name: 'Adopt-a-Farm Program', status: 'Fulfilled', description: 'Distributed farm inputs to 250,000 farmers across Luzon, Visayas, and Mindanao.', reference: 'https://www.da.gov.ph/' },
-      { name: 'Maharlika Investment Fund', status: 'Fulfilled', description: 'Established a sovereign wealth fund to attract foreign investment.', reference: 'https://www.officialgazette.gov.ph/' },
+      { name: 'Adopt-a-Farm Program', status: 'Fulfilled', description: 'Distributed farm inputs to 250,000 farmers across Luzon, Visayas, and Mindanao.', reference: 'https://www.da.gov.ph/president-marcos-unveils-das-agri-puhunan-program-targeting-1-2-million-hectares-with-low-cost-credit-and-market-support/' },
+      { name: 'Maharlika Investment Fund', status: 'Fulfilled', description: 'Signed RA 11954 on July 18, 2023, establishing the Philippines\' first sovereign wealth fund to attract foreign investment.', reference: 'https://pco.gov.ph/news_releases/pbbm-signs-maharlika-investment-fund-act-phs-first-ever-sovereign-wealth-fund/' },
       { name: 'Rice Tariffication Law Amendment', status: 'In Progress', description: 'Proposed amendments to stabilize rice prices for consumers and farmers.', reference: 'https://www.da.gov.ph/' },
-      { name: 'Free Irrigation for Farmers', status: 'In Progress', description: 'Nationwide rollout of free irrigation services for small-scale farmers.', reference: 'https://www.da.gov.ph/' },
+      { name: 'Free Irrigation for Farmers', status: 'In Progress', description: 'Nationwide rollout of free irrigation services for small-scale farmers via NIA solar-powered projects.', reference: 'https://www.nia.gov.ph/content/nia-supports-agri-plans-president-marcos' },
       { name: 'Anti-Illegal Drugs Campaign', status: 'In Progress', description: 'Continuation of the anti-drug campaign through proper legal channels.', reference: 'https://www.pna.gov.ph/' },
       { name: 'Salary Increase for Teachers', status: 'Discontinued', description: 'Proposed across-the-board salary increase for public school teachers was shelved due to budget constraints.', reference: 'https://www.deped.gov.ph/' },
     ],
@@ -49,7 +49,7 @@ const politicians = [
     term: '2022 – 2028',
     successRate: '50%',
     projects: [
-      { name: 'MATATAG Curriculum', status: 'In Progress', description: 'Launched a revised K-12 curriculum to address learning losses from the pandemic.', reference: 'https://www.deped.gov.ph/' },
+      { name: 'MATATAG Curriculum', status: 'In Progress', description: 'Launched a revised K-12 curriculum to address learning losses from the pandemic.', reference: 'https://www.deped.gov.ph/matatag-curriculum/' },
       { name: 'School-Based Feeding Program', status: 'In Progress', description: 'Expanded feeding programs in all public elementary schools nationwide.', reference: 'https://www.deped.gov.ph/' },
       { name: 'Address Textbook Shortage', status: 'In Progress', description: 'Procurement of new textbooks initiated but backlogs remain in many schools.', reference: 'https://www.deped.gov.ph/' },
     ],
@@ -102,8 +102,8 @@ const politicians = [
     term: '2019 – 2025',
     successRate: '50%',
     projects: [
-      { name: 'Malasakit Centers Act', status: 'Fulfilled', description: 'Established one-stop shops in hospitals providing financial assistance to indigent patients.', reference: 'https://www.senate.gov.ph/' },
-      { name: 'Medical Assistance to Indigent Patients Act', status: 'Fulfilled', description: 'Authored law expanding medical assistance to poor and indigent patients nationwide.', reference: 'https://www.senate.gov.ph/' },
+      { name: 'Malasakit Centers Act (RA 11463)', status: 'Fulfilled', description: 'Authored and sponsored RA 11463, establishing one-stop shops in DOH hospitals for financial assistance to indigent patients. Over 17 million Filipinos served.', reference: 'https://www.pna.gov.ph/articles/1087835' },
+      { name: 'Medical Assistance to Indigent Patients Act', status: 'Fulfilled', description: 'Authored law expanding medical assistance to poor and indigent patients nationwide.', reference: 'https://ldr.senate.gov.ph/subject/malasakit-centers' },
       { name: 'Philippine Sports Training Center Act', status: 'In Progress', description: 'Pushing for the establishment of a world-class sports training facility for Filipino athletes.', reference: 'https://www.senate.gov.ph/' },
     ],
     stances: [
@@ -181,8 +181,8 @@ const politicians = [
     term: '2022 – 2028',
     successRate: '67%',
     projects: [
-      { name: 'Free Internet Access in Public Places Act', status: 'Fulfilled', description: 'Authored law mandating free internet access in public schools, libraries, and government offices.', reference: 'https://www.senate.gov.ph/' },
-      { name: 'Go Negosyo Act', status: 'Fulfilled', description: 'Established Negosyo Centers in all municipalities to support micro and small enterprises.', reference: 'https://www.senate.gov.ph/' },
+      { name: 'Go Negosyo Act (RA 10644)', status: 'Fulfilled', description: 'Authored law establishing Negosyo Centers in all municipalities to support micro, small and medium enterprises nationwide.', reference: 'https://ldr.senate.gov.ph/senator/aquino-iv-paolo-benigno-bam' },
+      { name: 'Free Internet Access in Public Places Act', status: 'Fulfilled', description: 'Principal sponsor of law mandating free internet access in public schools, libraries, and government offices.', reference: 'https://web.senate.gov.ph/press_release/2017/0724_aquino1.asp' },
       { name: 'Universal Pre-School Education Act', status: 'In Progress', description: 'Pushing for mandatory and free pre-school education for all Filipino children.', reference: 'https://www.senate.gov.ph/' },
     ],
     stances: [
@@ -208,9 +208,9 @@ const politicians = [
     term: '2022 – 2028',
     successRate: '100%',
     projects: [
-      { name: 'Safe Spaces Act', status: 'Fulfilled', description: 'Authored the Bawal Bastos Law expanding protections against gender-based harassment in public spaces.', reference: 'https://www.senate.gov.ph/' },
-      { name: 'Mental Health Act', status: 'Fulfilled', description: 'Principally authored the Philippine Mental Health Act establishing a national mental health policy.', reference: 'https://www.senate.gov.ph/' },
-      { name: 'Expanded Maternity Leave Law', status: 'Fulfilled', description: 'Authored law expanding maternity leave to 105 days for female workers in both public and private sectors.', reference: 'https://www.senate.gov.ph/' },
+      { name: 'Safe Spaces Act (RA 11313)', status: 'Fulfilled', description: 'Authored the Bawal Bastos Law expanding protections against gender-based harassment in public spaces, workplaces, and online.', reference: 'https://legacy.senate.gov.ph/press_release/2019/0529_hontiveros1.asp' },
+      { name: 'Mental Health Act (RA 11036)', status: 'Fulfilled', description: 'Principally authored the Philippine Mental Health Act, providing the first legal framework for mental health care in the country.', reference: 'https://issuances-library.senate.gov.ph/senator/hontiveros-risa' },
+      { name: 'Expanded Maternity Leave Law (RA 11210)', status: 'Fulfilled', description: 'Authored law expanding maternity leave to 105 days for female workers in both public and private sectors.', reference: 'https://senrisahontiveros.com/legislation/' },
     ],
     stances: [
       { issue: 'Same-Sex Marriage', stance: 'Agree', reference: 'https://en.wikipedia.org/wiki/Risa_Hontiveros' },
