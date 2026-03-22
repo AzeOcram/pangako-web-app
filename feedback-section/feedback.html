@@ -71,7 +71,7 @@
           </div>
 
           <div class="form-group">
-            <label for="feedSource">Source URL <span class="required">*</span></label>
+            <label for="feedSource">Source URL <span class="required" id="sourceLabel">*</span></label>
             <input type="text" id="feedSource" placeholder="https://rappler.com/..." />
           </div>
 
@@ -103,8 +103,9 @@
       const source = document.getElementById('feedSource').value.trim();
       const errorEl = document.getElementById('formError');
 
-      // Validation
-      if (!politician || !type || !description || !source) {
+      // Validation — source only required if not General Feedback
+      const sourceRequired = type !== 'General Feedback';
+      if (!politician || !type || !description || (sourceRequired && !source)) {
         errorEl.textContent = 'Please fill in all required fields.';
         errorEl.style.display = 'block';
         return;
@@ -188,6 +189,17 @@
 
     // Load on page init
     renderSubmissions();
+
+    document.getElementById('feedType').addEventListener('change', function() {
+      const label = document.getElementById('sourceLabel');
+      if (this.value === 'General Feedback') {
+        label.textContent = '(optional)';
+        label.className = 'optional';
+      } else {
+        label.textContent = '*';
+        label.className = 'required';
+      }
+    });
   </script>
 
   <script src="../page-transitions.js"></script>
