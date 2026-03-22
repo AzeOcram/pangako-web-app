@@ -9,6 +9,7 @@ const politicians = [
   {
     firstname: 'BONG BONG',
     lastname: 'MARCOS',
+    order: 1,
     fullname: 'Ferdinand Romualdez Marcos Jr.',
     photo: '/images/marcos.png',
     position: 'President',
@@ -40,6 +41,7 @@ const politicians = [
   {
     firstname: 'SARA',
     lastname: 'DUTERTE',
+    order: 2,
     fullname: 'Sara Zimmerman Duterte-Carpio',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sara_Duterte_2022.jpg/440px-Sara_Duterte_2022.jpg',
     position: 'Vice President',
@@ -65,6 +67,7 @@ const politicians = [
   {
     firstname: 'FRANCIS',
     lastname: 'ESCUDERO',
+    order: 3,
     fullname: 'Francis Joseph G. Escudero',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Francis_Escudero_official_photo.jpg/440px-Francis_Escudero_official_photo.jpg',
     position: 'Senate President',
@@ -89,6 +92,7 @@ const politicians = [
   {
     firstname: 'MARTIN',
     lastname: 'ROMUALDEZ',
+    order: 4,
     fullname: 'Ferdinand Martin Gerardo Romualdez',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Martin_Romualdez_official_photo.jpg/440px-Martin_Romualdez_official_photo.jpg',
     position: 'House Speaker',

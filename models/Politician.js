@@ -33,6 +33,7 @@ const politicianSchema = new mongoose.Schema({
   projects: [projectSchema],
   stances: [stanceSchema],
   saln: [salnSchema],
+  order: { type: Number, default: 99 },
 }, { timestamps: true });
 
 export default mongoose.model('Politician', politicianSchema);

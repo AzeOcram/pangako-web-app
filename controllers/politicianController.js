@@ -14,7 +14,7 @@ export const getAllPoliticians = async (req, res) => {
       ];
     }
 
-    const politicians = await Politician.find(filter).sort({ lastname: 1 });
+    const politicians = await Politician.find(filter).sort({ order: 1, lastname: 1 });
     res.json({ success: true, data: politicians });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
