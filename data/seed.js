@@ -33,9 +33,9 @@ const politicians = [
       { issue: 'Mandatory ROTC', stance: 'Agree', reference: 'https://www.pna.gov.ph/' },
     ],
     saln: [
-      { year: '2022', assets: '₱55,000,000', liabilities: '₱2,100,000', networth: '₱52,900,000', reference: 'https://www.ombudsman.gov.ph/' },
-      { year: '2023', assets: '₱58,400,000', liabilities: '₱1,800,000', networth: '₱56,600,000', reference: 'https://www.ombudsman.gov.ph/' },
-      { year: '2024', assets: '₱61,200,000', liabilities: '₱1,500,000', networth: '₱59,700,000', reference: 'https://www.ombudsman.gov.ph/' },
+      { year: '2022', assets: '₱960,700,422', liabilities: '₱0', networth: '₱960,700,422', reference: 'https://saln.bettergov.ph/saln/ferdinand-marcos-jr./2022-marcos-jr..pdf' },
+      { year: '2023', assets: '₱1,157,867,589', liabilities: '₱0', networth: '₱1,157,867,589', reference: 'https://saln.bettergov.ph/saln/ferdinand-marcos-jr./2023-marcos-jr..pdf' },
+      { year: '2024', assets: '₱1,375,378,063', liabilities: '₱0', networth: '₱1,375,378,063', reference: 'https://saln.bettergov.ph/saln/ferdinand-marcos-jr./2024-marcos-jr..pdf' },
     ],
   },
   {
@@ -60,8 +60,9 @@ const politicians = [
       { issue: 'Mandatory ROTC', stance: 'Agree', reference: 'https://www.pna.gov.ph/' },
     ],
     saln: [
-      { year: '2022', assets: '₱14,000,000', liabilities: '₱800,000', networth: '₱13,200,000', reference: 'https://www.ombudsman.gov.ph/' },
-      { year: '2023', assets: '₱16,500,000', liabilities: '₱700,000', networth: '₱15,800,000', reference: 'https://www.ombudsman.gov.ph/' },
+      { year: '2022', assets: '₱74,808,841', liabilities: '₱3,150,000', networth: '₱71,658,841', reference: 'https://saln.bettergov.ph/saln/sara-duterte/2022-sara-duterte.pdf' },
+      { year: '2023', assets: '₱80,058,841', liabilities: '₱2,550,000', networth: '₱77,508,841', reference: 'https://saln.bettergov.ph/saln/sara-duterte/2023-sara-duterte.pdf' },
+      { year: '2024', assets: '₱98,462,370', liabilities: '₱9,950,000', networth: '₱88,512,370', reference: 'https://saln.bettergov.ph/saln/sara-duterte/2024-sara-duterte.pdf' },
     ],
   },
   {
@@ -85,8 +86,9 @@ const politicians = [
       { issue: 'West Philippine Sea Arbitration', stance: 'Agree', reference: 'https://www.senate.gov.ph/' },
     ],
     saln: [
-      { year: '2022', assets: '₱32,000,000', liabilities: '₱1,200,000', networth: '₱30,800,000', reference: 'https://www.ombudsman.gov.ph/' },
-      { year: '2023', assets: '₱35,000,000', liabilities: '₱1,000,000', networth: '₱34,000,000', reference: 'https://www.ombudsman.gov.ph/' },
+      { year: '2017', assets: '₱8,502,082', liabilities: '₱0', networth: '₱8,502,082', reference: 'https://www.rappler.com/philippines/202728-senators-2017-saln-villar-pacquiao-richest/' },
+      { year: '2018', assets: '₱15,575,228', liabilities: '₱5,000,000', networth: '₱10,575,228', reference: 'https://legacy.senate.gov.ph/Summary%202018%20SALN.pdf' },
+      { year: '2024', assets: '₱18,840,083', liabilities: '₱0', networth: '₱18,840,083', reference: 'https://www.abs-cbn.com/news/nation/2025/10/29/all-24-senators-of-20th-congress-release-salns-1343' },
     ],
   },
   {
