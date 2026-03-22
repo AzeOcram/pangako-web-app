@@ -5,13 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>News — Pangako</title>
   <link rel="stylesheet" href="news-detail.css" />
+  <link rel="stylesheet" href="../page-transitions.css" />
+
+  <script>
+    if (sessionStorage.getItem('pangakoHomeTransition')) {
+      document.documentElement.classList.add('from-home-transition');
+    }
+  </script>
 </head>
 <body>
 
+  <a href="../index.html" class="page-logo">
+    <img src="../images/main_logo.png" alt="Pangako" class="page-logo-img" />
+  </a>
+
   <nav class="navbar">
-    <a href="../index.html" class="nav-logo">
-      <img src="../images/main_logo.png" alt="Pangako" class="nav-logo-img" />
-    </a>
     <div class="nav-links-wrapper">
       <ul class="nav-links">
         <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -65,8 +73,12 @@
       }
     }
 
+    document.getElementById('detailImg').style.viewTransitionName = 'news-image';
+
     loadArticle();
   </script>
+
+  <script src="../page-transitions.js"></script>
 
 </body>
 </html>

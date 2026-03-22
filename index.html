@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pangako</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="page-transitions.css" />
 </head>
 <body>
+  <div class="home-white-underlay"></div>
+  <div class="home-gradient-layer"></div>
 
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="#" class="nav-link active">Home</a></li>
-      <li><a href="politicians-section/politicians.html" class="nav-link">Politicians</a></li>
-      <li><a href="news-section/news.html" class="nav-link">News</a></li>
-      <li><a href="feedback-section/feedback.html" class="nav-link">Feedback</a></li>
-    </ul>
+  <nav class="navbar navbar-home">
+    <div class="nav-links-wrapper nav-links-wrapper-home">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="politicians-section/politicians.html" class="nav-link">Politicians</a></li>
+        <li><a href="news-section/news.html" class="nav-link">News</a></li>
+        <li><a href="feedback-section/feedback.html" class="nav-link">Feedback</a></li>
+      </ul>
+    </div>
   </nav>
 
   <section class="hero">
@@ -22,5 +27,6 @@
     <p class="hero-sub">Tracking government promises for a better Philippines.</p>
   </section>
 
+  <script src="page-transitions.js"></script>
 </body>
 </html>

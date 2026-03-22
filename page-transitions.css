@@ -1,0 +1,56 @@
+.transition-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 99990;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.transition-white-fill {
+  position: fixed;
+  inset: 0;
+  background: #f0f0f0;
+  z-index: 99989;
+}
+
+.transition-gradient-old,
+.transition-gradient-new {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  transform-origin: top center;
+  border-radius: 0;
+}
+
+.transition-gradient-old {
+  height: 100vh;
+  background: linear-gradient(to bottom, #3d4f99 0%, #7b4f8e 50%, #c45070 100%);
+  z-index: 99990;
+}
+
+.transition-gradient-new {
+  height: 68px;
+  background: linear-gradient(to right, #3d4f99, #c45070);
+  opacity: 0;
+  z-index: 99991;
+}
+
+.transition-logo-clone {
+  object-fit: contain;
+  z-index: 99999;
+}
+
+.transition-nav-clone {
+  overflow: hidden;
+  z-index: 99999;
+}
+
+.transition-nav-clone .nav-links {
+  margin: 0;
+  padding: 0;
+}
+
+.transition-nav-clone .nav-link {
+  white-space: nowrap;
+}
