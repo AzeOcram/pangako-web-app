@@ -10,7 +10,7 @@ const politicians = [
     firstname: 'BONG BONG',
     lastname: 'MARCOS',
     fullname: 'Ferdinand Romualdez Marcos Jr.',
-    photo: '/images/politician.png',
+    photo: '/images/marcos.png',
     position: 'President',
     party: 'Partido Federal ng Pilipinas (PFP)',
     term: '2022 – 2028',
