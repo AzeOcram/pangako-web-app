@@ -7,7 +7,7 @@ dotenv.config();
 
 const politicians = [
   {
-    firstname: 'BONG BONG',
+    firstname: 'BONGBONG',
     lastname: 'MARCOS',
     order: 1,
     fullname: 'Ferdinand Romualdez Marcos Jr.',
@@ -25,9 +25,9 @@ const politicians = [
       { name: 'Salary Increase for Teachers', status: 'Discontinued', description: 'Proposed across-the-board salary increase for public school teachers was shelved due to budget constraints.', reference: 'https://www.deped.gov.ph/' },
     ],
     stances: [
-      { issue: 'Same-Sex Marriage', stance: 'Disagree', reference: 'https://www.rappler.com/' },
-      { issue: 'Death Penalty', stance: 'Agree', reference: 'https://www.rappler.com/' },
-      { issue: 'Divorce Legalization', stance: 'Disagree', reference: 'https://www.rappler.com/' },
+      { issue: 'Same-Sex Marriage', stance: 'Agree', reference: 'https://www.gmanetwork.com/news/topstories/nation/555655/bongbong-marcos-on-same-sex-marriage-vox-populi-vox-dei/story/' },
+      { issue: 'Death Penalty', stance: 'Disagree', reference: 'https://mb.com.ph/2022/09/14/marcos-still-conflicted-about-death-penalty' },
+      { issue: 'Divorce Legalization', stance: 'Agree', reference: 'https://www.philstar.com/headlines/2022/03/19/2168525/marcos-open-divorce-but-dont-make-it-easy' },
       { issue: 'Federalism', stance: 'Agree', reference: 'https://www.rappler.com/' },
       { issue: 'West Philippine Sea Arbitration', stance: 'Agree', reference: 'https://www.pna.gov.ph/' },
       { issue: 'Mandatory ROTC', stance: 'Agree', reference: 'https://www.pna.gov.ph/' },
@@ -54,7 +54,7 @@ const politicians = [
       { name: 'Address Textbook Shortage', status: 'In Progress', description: 'Procurement of new textbooks initiated but backlogs remain in many schools.', reference: 'https://www.deped.gov.ph/' },
     ],
     stances: [
-      { issue: 'Same-Sex Marriage', stance: 'Disagree', reference: 'https://www.rappler.com/' },
+      { issue: 'Same-Sex Marriage', stance: 'Disagree', reference: 'https://mb.com.ph/2023/2/16/vp-duterte-denies-supporting-same-sex-marriage-in-ph' },
       { issue: 'Death Penalty', stance: 'Agree', reference: 'https://www.rappler.com/' },
       { issue: 'Divorce Legalization', stance: 'Disagree', reference: 'https://www.rappler.com/' },
       { issue: 'Mandatory ROTC', stance: 'Agree', reference: 'https://www.pna.gov.ph/' },
@@ -186,9 +186,9 @@ const politicians = [
       { name: 'Universal Pre-School Education Act', status: 'In Progress', description: 'Pushing for mandatory and free pre-school education for all Filipino children.', reference: 'https://www.senate.gov.ph/' },
     ],
     stances: [
-      { issue: 'Same-Sex Marriage', stance: 'Agree', reference: 'https://www.rappler.com/' },
-      { issue: 'Death Penalty', stance: 'Disagree', reference: 'https://www.rappler.com/' },
-      { issue: 'Divorce Legalization', stance: 'Agree', reference: 'https://www.rappler.com/' },
+      { issue: 'Same-Sex Marriage', stance: 'Disagree', reference: 'https://www.rappler.com/philippines/elections/229544-opposition-bets-differ-conservative-issues/' },
+      { issue: 'Death Penalty', stance: 'Disagree', reference: 'https://en.wikipedia.org/wiki/Bam_Aquino' },
+      { issue: 'Divorce Legalization', stance: 'Disagree', reference: 'https://www.rappler.com/philippines/elections/229544-opposition-bets-differ-conservative-issues/' },
       { issue: 'West Philippine Sea Arbitration', stance: 'Agree', reference: 'https://www.senate.gov.ph/' },
     ],
     saln: [
@@ -213,9 +213,9 @@ const politicians = [
       { name: 'Expanded Maternity Leave Law', status: 'Fulfilled', description: 'Authored law expanding maternity leave to 105 days for female workers in both public and private sectors.', reference: 'https://www.senate.gov.ph/' },
     ],
     stances: [
-      { issue: 'Same-Sex Marriage', stance: 'Agree', reference: 'https://www.rappler.com/' },
-      { issue: 'Death Penalty', stance: 'Disagree', reference: 'https://www.rappler.com/' },
-      { issue: 'Divorce Legalization', stance: 'Agree', reference: 'https://www.rappler.com/' },
+      { issue: 'Same-Sex Marriage', stance: 'Agree', reference: 'https://en.wikipedia.org/wiki/Risa_Hontiveros' },
+      { issue: 'Death Penalty', stance: 'Disagree', reference: 'https://en.wikipedia.org/wiki/Risa_Hontiveros' },
+      { issue: 'Divorce Legalization', stance: 'Agree', reference: 'https://legacy.senate.gov.ph/press_release/2023/0418_hontiveros2.asp' },
       { issue: 'West Philippine Sea Arbitration', stance: 'Agree', reference: 'https://www.senate.gov.ph/' },
     ],
     saln: [
