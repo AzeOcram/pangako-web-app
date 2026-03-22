@@ -181,3 +181,24 @@ body {
 .article-reference a:hover {
   text-decoration: underline;
 }
+
+/* ── Back button ── */
+.back-btn {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  z-index: 3;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
